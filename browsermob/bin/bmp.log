@@ -1,0 +1,37 @@
+[INFO  2024-11-12T14:12:16,264 net.lightbody.bmp.proxy.Main] (main) Starting BrowserMob Proxy version 2.1.4 
+[INFO  2024-11-12T14:12:16,296 org.eclipse.jetty.util.log] (main) jetty-7.x.y-SNAPSHOT 
+[INFO  2024-11-12T14:12:16,339 org.eclipse.jetty.util.log] (main) started o.e.j.s.ServletContextHandler{/,null} 
+[INFO  2024-11-12T14:12:16,518 org.eclipse.jetty.util.log] (main) Started SelectChannelConnector@0.0.0.0:8080 
+[INFO  2024-11-12T14:12:43,518 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (qtp43856716-18) Starting proxy at address: 0.0.0.0/0.0.0.0:8081 
+[INFO  2024-11-12T14:12:43,532 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (qtp43856716-18) Proxy listening with TCP transport 
+[INFO  2024-11-12T14:12:43,646 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (qtp43856716-18) Proxy started at address: /0:0:0:0:0:0:0:0:8081 
+[WARN  2024-11-12T14:12:51,209 net.lightbody.bmp.mitm.util.SslUtil] (LittleProxy-0-ClientToProxyWorker-0) Disabling upstream server certificate verification. This will allow attackers to intercept communications with upstream servers. 
+[INFO  2024-11-12T14:13:06,429 org.littleshoot.proxy.impl.ClientToProxyConnection] (LittleProxy-0-ClientToProxyWorker-4) (AWAITING_INITIAL) [id: 0x9334836e, L:/0:0:0:0:0:0:0:1:8081 - R:/0:0:0:0:0:0:0:1:60617]: Bad Host beacon.krxd.net:443 
+[INFO  2024-11-12T14:13:08,803 org.littleshoot.proxy.impl.ClientToProxyConnection] (LittleProxy-0-ClientToProxyWorker-0) (AWAITING_INITIAL) [id: 0x62caf594, L:/0:0:0:0:0:0:0:1:8081 - R:/0:0:0:0:0:0:0:1:60787]: Bad Host id.geistm.com:443 
+[INFO  2024-11-12T14:13:10,202 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-3) (HANDSHAKING) [id: 0x58d8bf7c, L:0.0.0.0/0.0.0.0:60870]: Connection to upstream server failed java.nio.channels.ClosedChannelException: null
+	at io.netty.handler.ssl.SslHandler.channelInactive(...)(Unknown Source) ~[browsermob-dist-2.1.4.jar:?]
+
+[INFO  2024-11-12T14:13:17,043 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-7) (AWAITING_INITIAL) [id: 0x6883795d, L:/168.150.20.40:60865 - R:ums.acuityplatform.com/69.90.133.51:443]: An IOException occurred on ProxyToServerConnection: Connection reset by peer 
+[INFO  2024-11-12T14:13:17,045 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-7) (AWAITING_INITIAL) [id: 0x6883795d, L:/168.150.20.40:60865 - R:ums.acuityplatform.com/69.90.133.51:443]: Disconnecting open connection to server 
+[INFO  2024-11-12T14:13:21,495 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-7) (AWAITING_INITIAL) [id: 0x914d8f88, L:/168.150.20.40:60825 - R:token.rubiconproject.com/69.173.154.8:443]: An IOException occurred on ProxyToServerConnection: Connection reset by peer 
+[INFO  2024-11-12T14:13:21,496 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-7) (AWAITING_INITIAL) [id: 0x914d8f88, L:/168.150.20.40:60825 - R:token.rubiconproject.com/69.173.154.8:443]: Disconnecting open connection to server 
+[INFO  2024-11-12T14:13:40,146 org.littleshoot.proxy.impl.ClientToProxyConnection] (LittleProxy-0-ClientToProxyWorker-5) (AWAITING_INITIAL) [id: 0x9cfb12d1, L:/0:0:0:0:0:0:0:1:8081 - R:/0:0:0:0:0:0:0:1:61049]: An IOException occurred on ClientToProxyConnection: Connection reset by peer 
+[INFO  2024-11-12T14:13:40,146 org.littleshoot.proxy.impl.ClientToProxyConnection] (LittleProxy-0-ClientToProxyWorker-0) (AWAITING_INITIAL) [id: 0x04e1cff1, L:/0:0:0:0:0:0:0:1:8081 - R:/0:0:0:0:0:0:0:1:61038]: An IOException occurred on ClientToProxyConnection: Connection reset by peer 
+[INFO  2024-11-12T14:13:40,201 org.littleshoot.proxy.impl.ClientToProxyConnection] (LittleProxy-0-ClientToProxyWorker-0) (NEGOTIATING_CONNECT) [id: 0x3698f2af, L:/0:0:0:0:0:0:0:1:8081 - R:/0:0:0:0:0:0:0:1:61056]: An IOException occurred on ClientToProxyConnection: Connection reset by peer 
+[INFO  2024-11-12T14:13:40,203 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-5) (HANDSHAKING) [id: 0x8d71b120, L:0.0.0.0/0.0.0.0:61057]: Connection to upstream server failed java.nio.channels.ClosedChannelException: null
+	at io.netty.handler.ssl.SslHandler.channelInactive(...)(Unknown Source) ~[browsermob-dist-2.1.4.jar:?]
+
+[INFO  2024-11-12T14:14:25,048 org.littleshoot.proxy.impl.ProxyToServerConnection] (LittleProxy-0-ProxyToServerWorker-5) (CONNECTING) [id: 0x9119fcf2]: Connection to upstream server failed io.netty.channel.AbstractChannel$AnnotatedConnectException: Operation timed out: cm-supply-web.gammaplatform.com/35.186.154.107:443
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:?]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777) ~[?:?]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:346) ~[browsermob-dist-2.1.4.jar:?]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340) [browsermob-dist-2.1.4.jar:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:639) [browsermob-dist-2.1.4.jar:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:574) [browsermob-dist-2.1.4.jar:?]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:488) [browsermob-dist-2.1.4.jar:?]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:450) [browsermob-dist-2.1.4.jar:?]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873) [browsermob-dist-2.1.4.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+
+[INFO  2024-11-12T14:40:28,963 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Shutting down proxy server immediately (non-graceful) 
+[INFO  2024-11-12T14:40:28,980 org.littleshoot.proxy.impl.DefaultHttpProxyServer] (LittleProxy-JVM-shutdown-hook) Closing all channels (non-graceful) 
